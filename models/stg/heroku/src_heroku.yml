@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: heroku_postgres_events
+    description: ""
+    tables:
+      - name: events
+        description: ""
+        columns:
+          - name: event_id
+            description: ""
+          - name: page_url
+            description: ""
+          - name: event_type
+            description: ""
+          - name: user_id
+            description: ""
+          - name: product_id
+            description: ""
+          - name: session_id
+            description: ""
+          - name: created_at
+            description: ""
+          - name: order_id
+            description: ""
+          - name: _fivetran_deleted
+            description: ""
+          - name: _fivetran_synced
+            description: ""

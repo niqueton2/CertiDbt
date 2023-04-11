@@ -42,3 +42,6 @@ models:
       +tags: Gold
       +schema: GOLD
 
+on-run-start: 
+    - "drop stage if exists ngarcia_db.test.melon" 
+    - "create stage ngarcia_db.test.melon" 

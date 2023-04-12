@@ -7,5 +7,6 @@ _ROW
 ,QUANTITY
 ,MONTH
 ,PRODUCT_ID
-,_FIVETRAN_SYNCED
+, {{ fecha_id('_FIVETRAN_SYNCED') }} as id_fecha
+, {{ time_id('_FIVETRAN_SYNCED') }} as id_time
 from budget

@@ -6,6 +6,7 @@ select
 ORDER_ID
 ,PRODUCT_ID
 ,QUANTITY
-,_FIVETRAN_DELETED
-,_FIVETRAN_SYNCED
+, {{ fecha_id('_FIVETRAN_SYNCED') }} as id_fecha
+, {{ time_id('_FIVETRAN_SYNCED') }} as id_time
 from oi
+where _FIVETRAN_DELETED is null

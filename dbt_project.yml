@@ -24,14 +24,14 @@ vars:
 
 tests:
   +store_failures: true
-  +database: NGARCIA_DB
+  +database: NGARCIA_DB_DEV
   +schema: TEST
 
 models:
 
   certi_dbt:
-    +database: NGARCIA_DB
-
+    +database: NGARCIA_DB_DEV
+    
     stg:
       materialized: view
       +tags: Silver
@@ -44,13 +44,10 @@ models:
 
 snapshots:
     certi_dbt:
-      target_database: NGARCIA_DB
+      target_database: NGARCIA_DB_DEV
       
       stg:
         target_schema: 'target.schema_SILVER'
     
       marts: 
         target_schema: 'target.schema_GOLD'
-on-run-start: 
-    - "drop stage if exists ngarcia_db.test.melon" 
-    - "create stage ngarcia_db.test.melon" 

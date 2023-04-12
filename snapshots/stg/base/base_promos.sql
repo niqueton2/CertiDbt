@@ -2,7 +2,6 @@
 
 {{
     config(
-      target_schema='SILVER',
       unique_key='PROMO_ID',
       strategy='check',
       check_cols=['DISCOUNT', 'STATUS'],

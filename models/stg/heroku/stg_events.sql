@@ -9,8 +9,9 @@ EVENT_ID
 ,USER_ID
 ,PRODUCT_ID
 ,SESSION_ID
-, {{ fecha_id('CREATED_AT') }} as id_fecha_created
-, {{ time_id('CREATED_AT') }} as id_time_created
+, {{ fecha_id('CREATED_AT') }} as id_fecha_PRODUCED
+, {{ time_id('CREATED_AT') }} as id_time_PRODUCED
+,CREATED_AT AS PRODUCED_AT
 ,ORDER_ID
 ,_FIVETRAN_DELETED
 , {{ fecha_id('_FIVETRAN_SYNCED') }} as id_fecha

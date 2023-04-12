@@ -12,6 +12,7 @@ USER_ID
 ,TOTAL_ORDERS
 ,FIRST_NAME
 ,EMAIL
-,_FIVETRAN_DELETED
-,_FIVETRAN_SYNCED 
+, {{ fecha_id('_FIVETRAN_SYNCED') }} as id_fecha
+, {{ time_id('_FIVETRAN_SYNCED') }} as id_time
 from u
+where _FIVETRAN_DELETED is null

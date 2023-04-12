@@ -13,6 +13,7 @@ select
 ,oi.id_fecha
 ,oi.id_time
 ,o.ADDRESS_ID
+,timestamp_carga
 
 from oi 
 left join orders o 

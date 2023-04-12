@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: ""
+    config:
+      sql_header: "use warehouse WH_BASICO;"
+    columns:
+      - name: address_id
+        description: ""
+
+      - name: zipcode
+        description: ""
+
+      - name: country
+        description: ""
+
+      - name: address
+        description: ""
+
+      - name: state
+        description: ""
+
+      - name: id_fecha
+        description: ""
+
+      - name: id_time
+        description: ""

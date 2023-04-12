@@ -24,7 +24,7 @@ vars:
 
 tests:
   +store_failures: true
-  +database: NGARCIA_DB_DEV
+  +database: "NGARCIA_DB_{{env_var('DBT_ENVIROMENT')}}"
   +schema: TEST
 
 models:
@@ -35,19 +35,21 @@ models:
     stg:
       materialized: view
       +tags: Silver
-      +schema: 'SILVER'
+      +schema: SILVER
 
     marts:
       materialized: table
       +tags: Gold
-      +schema: 'GOLD'
+      +schema: GOLD
 
 snapshots:
-    certi_dbt:
-      target_database: NGARCIA_DB_DEV
-      
-      stg:
-        target_schema: 'target.schema_SILVER'
-    
-      marts: 
-        target_schema: 'target.schema_GOLD'
+
+  certi_dbt:
+    +target_database: "NGARCIA_DB_{{env_var('DBT_ENVIROMENT')}}"
+
+    stg:
+      +target_schema: "{{ target.schema }}_SILVER"
+      +tags: Silver
+    marts: 
+      +target_schema: "{{ target.schema }}_GOLD"
+      +tags: Gold

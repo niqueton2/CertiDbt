@@ -19,7 +19,7 @@ clean-targets:
 
 
 vars:
-
+  
   producto: "Aloe Vera"
 
 tests:
@@ -29,19 +29,28 @@ tests:
 
 models:
 
-  my_new_project:
+  certi_dbt:
     +database: NGARCIA_DB
 
     stg:
       materialized: view
       +tags: Silver
-      +schema: SILVER
+      +schema: 'SILVER'
 
     marts:
       materialized: table
       +tags: Gold
-      +schema: GOLD
+      +schema: 'GOLD'
 
+snapshots:
+    certi_dbt:
+      target_database: NGARCIA_DB
+      
+      stg:
+        target_schema: 'target.schema_SILVER'
+    
+      marts: 
+        target_schema: 'target.schema_GOLD'
 on-run-start: 
     - "drop stage if exists ngarcia_db.test.melon" 
     - "create stage ngarcia_db.test.melon" 

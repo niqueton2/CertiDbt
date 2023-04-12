@@ -30,7 +30,7 @@ tests:
 models:
 
   certi_dbt:
-    +database: NGARCIA_DB_DEV
+    +database: "NGARCIA_DB_{{env_var('DBT_ENVIROMENT')}}"
     
     stg:
       materialized: view

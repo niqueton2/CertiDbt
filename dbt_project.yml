@@ -20,7 +20,7 @@ clean-targets:
 
 vars:
   
-  producto: "Aloe Vera"
+  producto: "'Aloe Vera'"
 
 tests:
   +store_failures: true

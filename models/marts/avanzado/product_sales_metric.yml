@@ -1,0 +1,20 @@
+version: 2
+
+
+metrics:
+  - name: product_sales_metric
+    label: Product_count
+    model: ref('aux_metric')
+    description: ""
+
+    calculation_method: sum
+    expression: quantity
+
+    timestamp: timestamp_carga
+    time_grains: [day, week, month, quarter, year]
+
+    dimensions:
+      - Name
+
+
+        

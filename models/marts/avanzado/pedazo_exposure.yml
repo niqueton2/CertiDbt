@@ -1,0 +1,19 @@
+version: 2
+
+exposures:
+
+  - name: exposura_poco_madura
+    label: Pararara
+    type: dashboard
+    maturity: medium
+    url: https://bi.tool/dashboards/1
+    description: ""
+
+    depends_on:
+      - ref('facts_order_items')
+      - source('google_sheets', 'budget')
+
+
+    owner:
+      name: Joselito
+      email: pepe_for_real@mulatas.com

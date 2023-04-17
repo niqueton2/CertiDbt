@@ -3,10 +3,5 @@ with p as (
 )
 
 select
-PRODUCT_ID
-,PRICE
-,NAME
-,INVENTORY
-,_FIVETRAN_DELETED
-,_FIVETRAN_SYNCED 
+*
 from p

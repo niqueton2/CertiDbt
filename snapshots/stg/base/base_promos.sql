@@ -5,6 +5,7 @@
       unique_key='PROMO_ID',
       strategy='check',
       check_cols=['DISCOUNT', 'STATUS'],
+      invalidate_hard_deletes=True,
     )
 }}
 

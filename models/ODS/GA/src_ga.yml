@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: GA 
+    tables:
+      - name: VISITS
+      - name: HITS
+      - name: PROMOTIONS

@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: GIGYA 
+    tables:
+      - name: CSCSTATS
+      - name: LATEST_GLOBAL

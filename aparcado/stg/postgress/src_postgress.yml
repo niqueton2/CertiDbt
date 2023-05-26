@@ -103,7 +103,7 @@ sources:
             description: ""
 
       - name: users
-        description: ""
+        description: '{{ doc("usuarios") }}'
         columns:
           - name: user_id
             description: ""
